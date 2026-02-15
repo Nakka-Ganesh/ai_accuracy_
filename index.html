@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Accuracy & Literacy Tool for Bharat - Bridging the AI knowledge gap through intent clarity, accuracy checks, and responsible AI interaction">
+    <meta name="keywords" content="AI literacy, Bharat, India, AI education, prompt engineering, multilingual AI">
+    <title>AI Accuracy & Literacy Tool for Bharat - Bridging the AI Knowledge Gap</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span>🇮🇳</span>
+                <span>AI Literacy Bharat</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>AI for Every Bharatiya</h1>
+            <p>Bridging the AI literacy gap through intent clarity, accuracy checks, and responsible AI interaction for first-time users across Bharat</p>
+            <div class="cta-buttons">
+                <a href="#demo" class="btn btn-primary">Try Live Demo</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">500M+</div>
+                <div class="stat-label">First-time AI users in Bharat</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Accuracy improvement with clarification</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">22+</div>
+                <div class="stat-label">Languages supported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Prompt engineering knowledge required</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <h2 class="section-title">The Challenge We're Solving</h2>
+        <p class="section-subtitle">AI adoption in Bharat faces unique barriers that demand localized solutions</p>
+        
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon">⚠️</div>
+                <h3>Ambiguous Queries</h3>
+                <p>Users ask unclear questions in mixed languages without context, leading to inaccurate or irrelevant AI responses that can mislead.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🔤</div>
+                <h3>Mixed Language Barriers</h3>
+                <p>Hinglish, Tanglish, and code-mixing create understanding gaps between user intent and AI interpretation.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🎯</div>
+                <h3>Missing Context</h3>
+                <p>First-time users don't know what information to provide—purpose, audience, or domain—resulting in shallow outputs.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">❓</div>
+                <h3>No Prompt Engineering Skills</h3>
+                <p>Users lack technical knowledge to structure effective prompts, creating a steep learning curve for AI adoption.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">📊</div>
+                <h3>Unchecked Accuracy</h3>
+                <p>Users trust AI outputs without verification, leading to spread of misinformation, especially in education and health.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🌐</div>
+                <h3>Scale of Impact</h3>
+                <p>With 500M+ potential AI users in Bharat, the ripple effect of inaccurate outputs affects governance, education, and daily life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="demo-container">
+            <h2 class="section-title">See It In Action</h2>
+            <p class="section-subtitle">Experience how our tool transforms ambiguous queries into accurate, reliable responses</p>
+            
+            <div class="demo-box">
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                    <button class="lang-btn" onclick="setLanguage('hi')">हिंदी</button>
+                    <button class="lang-btn" onclick="setLanguage('mix')">Hinglish</button>
+                </div>
+
+                <div class="example-queries">
+                    <div class="example-query" onclick="useExample('health hindi mein batao')">
+                        "health hindi mein batao"
+                    </div>
+                    <div class="example-query" onclick="useExample('best college engineering')">
+                        "best college engineering"
+                    </div>
+                    <div class="example-query" onclick="useExample('sarkari scheme kaise apply')">
+                        "sarkari scheme kaise apply"
+                    </div>
+                    <div class="example-query" onclick="useExample('corona vaccine safe hai?')">
+                        "corona vaccine safe hai?"
+                    </div>
+                </div>
+
+                <div class="demo-steps">
+                    <!-- Step 1: User Input -->
+                    <div class="demo-step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Your Query (As You Naturally Ask)</h3>
+                        </div>
+                        <div class="input-area">
+                            <label>Type your question in any language:</label>
+                            <textarea id="userQuery" rows="3" placeholder="e.g., 'corona vaccine safe hai?' or 'best college engineering' or 'sarkari scheme apply kaise kare'"></textarea>
+                        </div>
+                        <button class="live-demo-btn" onclick="processQuery()">Analyze My Query →</button>
+                    </div>
+
+                    <!-- Step 2: AI Analysis & Clarification -->
+                    <div class="demo-step hidden" id="step2">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Smart Clarification (One Simple Question)</h3>
+                        </div>
+                        <div class="clarification-box">
+                            <strong>🤔 To give you the best answer, I need to know:</strong>
+                            <p id="clarificationQuestion"></p>
+                        </div>
+                        <div class="input-area">
+                            <label>Your answer:</label>
+                            <input type="text" id="clarificationAnswer" placeholder="e.g., 'for my 60-year-old mother with diabetes'">
+                        </div>
+                        <button class="live-demo-btn" onclick="processClarification()">Submit Answer →</button>
+                    </div>
+
+                    <!-- Step 3: Enhanced Query -->
+                    <div class="demo-step hidden" id="step3">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Enhanced Query (Built Automatically)</h3>
+                        </div>
+                        <div class="output-box">
+                            <strong>✨ Your question, now clarity-optimized:</strong>
+                            <p id="enhancedQuery"></p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: AI Response with Accuracy Check -->
+                    <div class="demo-step hidden" id="step4">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Accurate Response with Safety Check</h3>
+                        </div>
+                        <div class="output-box">
+                            <strong>✅ AI Response:</strong>
+                            <p id="aiResponse"></p>
+                        </div>
+                        <div class="accuracy-indicator">
+                            <div class="accuracy-badge">✓ Accuracy Verified</div>
+                            <div>
+                                <strong>Safety Checks Passed:</strong>
+                                <ul id="safetyChecks"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="live-demo-btn" onclick="resetDemo()" style="margin-top: 2rem; background: #7f8c8d;">
+                    Reset Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <h2 class="section-title">How We Make AI Accessible & Accurate</h2>
+        <p class="section-subtitle">A three-layer system designed specifically for Bharat's diverse user base</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Intent Analysis</h3>
+                <p>Automatically detects missing context—purpose, audience, domain, or constraints—from raw user input using NLP and pattern recognition.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Minimal Clarification</h3>
+                <p>Asks ONE simple question in the user's language to fill critical gaps, avoiding overwhelming first-time users with complex prompts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Auto Query Builder</h3>
+                <p>Constructs structured, accuracy-focused requests for the AI model without requiring users to learn prompt engineering.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Accuracy Verification</h3>
+                <p>Post-response checks for hallucinations, bias, and completeness before presenting information to users with confidence indicators.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Multilingual Support</h3>
+                <p>Handles 22+ Indian languages including Hinglish, Tanglish, and regional code-mixing for natural interaction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Literacy Education</h3>
+                <p>Teaches users responsible AI interaction through contextual tips, examples, and feedback on query quality over time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Safety First</h3>
+                <p>Built-in filters for misinformation in health, governance, and education domains with source verification.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Low-Bandwidth Optimized</h3>
+                <p>Works on 2G/3G connections with text-first interface, perfect for rural and semi-urban Bharat.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h3>Free & Open</h3>
+                <p>Available to all users—students, farmers, job seekers—with no subscription barriers to AI literacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section" id="impact">
+        <div class="impact-container">
+            <h2 class="section-title">Transforming Lives Across Bharat</h2>
+            <p class="section-subtitle">Real impact in education, governance, and everyday information access</p>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>🎓 Education</h3>
+                    <p>Students get accurate study material, exam prep guidance, and career counseling without misinformation or bias.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>🏛️ Governance</h3>
+                    <p>Citizens understand government schemes, application procedures, and rights with verified, up-to-date information.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>🏥 Healthcare</h3>
+                    <p>Health queries receive medically verified responses with appropriate disclaimers and source citations.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>💼 Employment</h3>
+                    <p>Job seekers get tailored career advice, skill development paths, and interview preparation based on their context.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>🌾 Agriculture</h3>
+                    <p>Farmers access accurate crop advisory, weather information, and market prices in their local language.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>💰 Financial Literacy</h3>
+                    <p>Safe guidance on banking, loans, and digital payments with fraud prevention awareness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Join the AI Literacy Movement</h2>
+            <p>Help us make AI accessible, accurate, and safe for every Bharatiya</p>
+            <div class="cta-buttons">
+                <a href="#demo" class="btn btn-primary">Try It Now</a>
+                <a href="#about" class="btn btn-secondary">Partner With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Project</h3>
+                <p>AI Accuracy & Literacy Tool for Bharat is an initiative to bridge the AI knowledge gap and promote responsible, trustworthy AI usage across India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#demo">Live Demo</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="#">Partner With Us</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Provide Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:contact@ailiteracybharat.org">contact@ailiteracybharat.org</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI Literacy Bharat. Made with ❤️ for every Bharatiya. | Empowering 500M+ users with accurate AI.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
